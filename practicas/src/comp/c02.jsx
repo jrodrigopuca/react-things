@@ -8,6 +8,11 @@ class C02 extends Component{
         this.state={miTexto:""};
         //obtengo el "e"
         this.cambiarTexto = this.cambiarTexto.bind(this);
+        this.saludar = this.saludar.bind(this);
+    }
+
+    saludar(e){
+        console.log(e.key)
     }
 
     cambiarTexto(e){
@@ -19,7 +24,7 @@ class C02 extends Component{
 
     return(
         <form>
-            <input type="text" onChange={this.cambiarTexto} placeholder="escribe algo"></input>
+            <input type="text" onChange={this.cambiarTexto} onKeyPress={this.saludar} placeholder="escribe algo"></input>
             <label>{texto}</label>
         </form>
     )

@@ -31,3 +31,39 @@
     transform: rotate(360deg);
   }
 }
+
+button{
+  margin:10px;
+  background-color: #61dafb;
+  padding: 5px;
+  color: #282c34;
+  border:0px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+input{
+  border-radius: 5px;
+  background-color: antiquewhite;
+  padding: 5px;
+  margin:10px;
+}
+
+input:not(:placeholder-shown){
+  background-color: white;
+}
+
+button:active{
+  background-color: white;
+}
+
+li {
+  list-style-type: circle;
+  border-style: groove;
+  padding: 5px;
+  margin: 5px;
+  
+}
+ul{
+  padding: 0;
+  margin:0;
+}

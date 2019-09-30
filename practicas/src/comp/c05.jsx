@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import { get } from 'http';
 
 // usar función
-function Lista(props){
+const Lista= (props)=>{
     const items= props.items;
 
     return(
@@ -11,8 +10,6 @@ function Lista(props){
         </ul>
     )
 }
-
-
 
 class C05 extends Component{
     state= {items:[]};

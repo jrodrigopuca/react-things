@@ -2,10 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-//import C01 from './comp/c01';
-//import C02 from './comp/c02';
-//import C03 from './comp/c03';
-import C05 from './comp/c05';
+import C08 from './comp/c08';
 
 function App() {
   return (
@@ -15,7 +12,7 @@ function App() {
         <p>
           Do something!
         </p>
-        <C05/>
+        <C08/>
       </header>
       
     </div>
