@@ -7,3 +7,4 @@ C06: Distintas formas de llamar a funciones
 C07: Lista To-Do
 C08: Lista usando promesa
 C09: Ciclo de vida
+C10: Actualizar estado con propiedades. Uso del defaultProps
