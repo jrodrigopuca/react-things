@@ -10,3 +10,7 @@
 
 ## 9/29
 - agregar md con lista de códigos realizados
+
+## 12/23
+- agregar jquery <code>yarn add jquery </code>
+- agregar jquery-ui <code>yarn add jquery-ui </code>

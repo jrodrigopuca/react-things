@@ -4,7 +4,7 @@ import {fromJS} from 'immutable';
 class Lista extends Component{
     state={
         data:fromJS({
-            items: new Array(5000).fill(null).map((v,i)=>i)
+            items: new Array(11).fill(null).map((v,i)=>i+1)
         })
     }
 

@@ -8,3 +8,7 @@ C07: Lista To-Do
 C08: Lista usando promesa
 C09: Ciclo de vida
 C10: Actualizar estado con propiedades. Uso del defaultProps
+C11: Generar Lista de elementos y mostrar
+C12: Tiempo: capturar y actualizar
+C13: Usando JQuery y JqueryUI
+C14: Lista usando promesas, wrapper y UNSAFE_componentWillMount
