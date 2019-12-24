@@ -12,3 +12,5 @@ C11: Generar Lista de elementos y mostrar
 C12: Tiempo: capturar y actualizar
 C13: Usando JQuery y JqueryUI
 C14: Lista usando promesas, wrapper y UNSAFE_componentWillMount
+C15: propTypes para agregar verificación de tipos 
+C16: propTypes

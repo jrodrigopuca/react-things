@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import C14 from './comp/c14';
+import C15 from './comp/c15';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <p>
           Do something!
         </p>
-        <C14/>                                                                
+        <C15/>                                                                
       </header>
     </div>
   );
