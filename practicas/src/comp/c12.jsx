@@ -15,7 +15,8 @@ class C12 extends Component{
     }
 
     shouldComponentUpdate(props,state){
-        return +state.modified > +this.state.modified; //compara el valor númerico de las fechas
+        //compara el valor númerico de las fechas
+        return +state.modified > +this.state.modified; 
     }
 
     componentDidMount(){
