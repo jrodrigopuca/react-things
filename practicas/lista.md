@@ -16,4 +16,9 @@ C15: propTypes: opcionales/requeridos
 C16: propTypes: verificación de tipos
 C17: propTypes: tipos especificos
 C18: propTypes: valor especifico 
-C19: Herencia de estados
+C19: Herencia: estados
+C20: Herencia: propiedades
+C21: Herencia: eventos
+C22: Higher-order: Render condicional
+C23: Higher-order: usando store (como en Redux)
+C24: Higher-order: compartiendo datos con store
