@@ -14,3 +14,6 @@
 ## 12/23
 - agregar jquery <code>yarn add jquery </code>
 - agregar jquery-ui <code>yarn add jquery-ui </code>
+
+## 1/03
+- agregar routes <code>yarn add react-router-dom </code>
