@@ -7,8 +7,9 @@ import { BrowserRouter } from 'react-router-dom';
 const DecirHola = () => (<p>Hola Route!</p>);
 
 /* 
+Uso de Routes en <v4.0
+más info: https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/migrating.md
 
-Uso de Routes en v<4.0
 const C25 = () => (
     <Router history={browserHistory}>
         <Route path="/" component={DecirHola} />
@@ -18,6 +19,7 @@ const C25 = () => (
 
 /**
  *  @Component C25: Uso de React Router
+ *  el BrowserRouter crea un history
  */
 const C25 = () => (
     <BrowserRouter>
