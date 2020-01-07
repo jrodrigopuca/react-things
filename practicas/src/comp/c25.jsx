@@ -19,7 +19,7 @@ const C25 = () => (
 
 /**
  *  @Component C25: Uso de React Router
- *  el BrowserRouter crea un history
+ *  el BrowserRouter crea una envoltura del mismo modo que lo hacia el browserHistory
  */
 const C25 = () => (
     <BrowserRouter>

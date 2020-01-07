@@ -22,4 +22,6 @@ C21: Herencia: eventos
 C22: Higher-order: Render condicional
 C23: Higher-order: usando store (como en Redux)
 C24: Higher-order: compartiendo datos con store
-C25: React Router: usando una ruta
+C25: React Router: utilizando BrowserRouter
+C26: React Router: especificando Route
+C27: React Router: usando Link

@@ -8,6 +8,7 @@ import {BrowserRouter as Router, Switch,Route} from 'react-router-dom';
  * Sin embargo lo que se especifica en raíz ("/") se muestra en los demás 
  * Ej: Si vamos a "/news" veremos el contenido de <Home> y de <News/>
  * 
+ * como no se utiliza <Switch> todas las rutas que sean similares se renderizan
  */
 
 const About = ()=>(<section>About me</section>);
