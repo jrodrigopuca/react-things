@@ -24,7 +24,10 @@
 - C22: Higher-order: Render condicional
 - C23: Higher-order: usando store (como en Redux)
 - C24: Higher-order: compartiendo datos con store
-- C25: React Router: utilizando BrowserRouter
+- C25: React Router: usando BrowserRouter
 - C26: React Router: especificando Route
 - C27: React Router: usando Link
-- C28: React Router: rutas anidadas
+- C28: React Router: usando HashRouter
+- C29: React Router: rutas anidadas
+- C30: React Router: Route Matchers
+- C31: React Router: 404
