@@ -31,3 +31,6 @@
 - C29: React Router: rutas anidadas
 - C30: React Router: Route Matchers
 - C31: React Router: 404
+- C32: React Router: Query Paramaters
+- C33: React Router: Prevenir navegación
+- 
