@@ -33,3 +33,4 @@
 - C31: React Router: 404
 - C32: React Router: Query Paramaters
 - C33: React Router: Prevenir navegación
+- C34: React Router: Modal
