@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { BrowserRouter, Switch, Link, Route } from 'react-router-dom';
 
 function Modal(props) {
@@ -32,10 +32,11 @@ function Colores(props) {
         height:200,
         backgroundColor:color,
     }
+    //props.history.push(props.match.url);
     return (
         <>
         texto texto texto
-        <Modal contenido={color} onClick={()=>{props.history.push(props.match.url);}}>
+        <Modal contenido={color} onClick={()=>{console.log('hola')}}>
             <div style={style}>
                 Mooooodal
             </div>
