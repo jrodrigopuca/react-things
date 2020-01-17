@@ -34,3 +34,5 @@
 - C32: React Router: Query Paramaters
 - C33: React Router: Prevenir navegación
 - C34: React Router: Modal
+- C35: Jest: Unit test
+- C36: Jest: Test en componente

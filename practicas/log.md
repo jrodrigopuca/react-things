@@ -17,3 +17,7 @@
 
 ## 1/03
 - agregar routes <code>yarn add react-router-dom </code>
+
+## 1/17
+- usando Jest (no hace falta agregarlo, ya viene incluido con create-react)
+ - Probar en consola <code>yarn test</code>
