@@ -21,3 +21,7 @@
 ## 1/17
 - usando Jest (no hace falta agregarlo, ya viene incluido con create-react)
  - Probar en consola <code>yarn test</code>
+
+## 1/18
+- instalando Enzyme <code>yarn add --dev enzyme enzyme-adapter-react-16 </code>
+

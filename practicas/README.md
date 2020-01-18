@@ -36,3 +36,5 @@
 - C34: React Router: Modal
 - C35: Jest: Unit test
 - C36: Jest: Test en componente
+- C37: Jest: Integration test
+- C38: Jest: Snapshot
