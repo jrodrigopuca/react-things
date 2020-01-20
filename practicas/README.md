@@ -37,4 +37,5 @@
 - C35: Jest: Unit test
 - C36: Jest: Test en componente
 - C37: Jest: Integration test
-- C38: Jest: Snapshot
+- C38: Jest + react-test-renderer: Snapshot
+- C39: Enzyme

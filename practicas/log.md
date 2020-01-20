@@ -27,3 +27,5 @@
 
 ## 1/19
 - instalando react-test-renderer <code> yarn add --dev react-test-renderer </code>
+## 1/20
+- Agrego src/setupTest.js (para poder utilizar enzyme)

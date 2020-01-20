@@ -1,8 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`interactuando 1`] = `
+<a
+  href="#"
+  onClick={[Function]}
+>
+  Click me
+</a>
+`;
+
+exports[`interactuando 2`] = `
+<a
+  href="#"
+  onClick={[Function]}
+>
+  Click me
+</a>
+`;
+
 exports[`renderiza 1`] = `
 <a
   href="#"
+  onClick={[Function]}
+>
+  Click me
+</a>
+`;
+
+exports[`renderiza con parametro 1`] = `
+<a
+  href="www.yardev.net"
+  onClick={[Function]}
 >
   Click me
 </a>
