@@ -25,3 +25,5 @@
 ## 1/18
 - instalando Enzyme <code>yarn add --dev enzyme enzyme-adapter-react-16 </code>
 
+## 1/19
+- instalando react-test-renderer <code> yarn add --dev react-test-renderer </code>
