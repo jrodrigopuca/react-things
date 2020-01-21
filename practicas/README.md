@@ -39,3 +39,4 @@
 - C37: Jest: Integration test
 - C38: Jest + react-test-renderer: Snapshot
 - C39: Enzyme
+- C40: Jest+Enzyme: Form

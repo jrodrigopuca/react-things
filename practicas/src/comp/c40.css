@@ -1,0 +1,14 @@
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+input, textarea{
+    margin: 15px 0;
+}
+
+textarea{
+    resize: none;
+}
