@@ -7,8 +7,32 @@ form{
 
 input, textarea{
     margin: 15px 0;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    transition: border-color .5s ease-out;
 }
 
 textarea{
     resize: none;
+}
+
+
+input:invalid:not(:placeholder-shown), textarea:invalid:not(:placeholder-shown){
+    border-color:red;
+}
+/*
+input:focus:invalid  ~ .cambiar{
+    transition: all 0s;
+    color: red;
+    content: "camb";
+}
+
+.cambiar{
+    transition: all 0s 9999999s;
+    
+}
+*/
+
+input:valid, textarea:valid{
+    border-color:greenyellow;
 }
