@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import './c40.css';
 
 class Contacto extends Component{
-    state= {Listo:false};
+    state={inputs:{name:false,email:false,message:false}, 
+        valid:false}
 
     _onSubmit(evt){
 
@@ -22,21 +23,27 @@ class Contacto extends Component{
         });
     }
 
-    _onChange(e){
-        console.log(e.target.checkValidity());
+    _onChange(e, input){
+        let inputs = this.state.inputs;
+        inputs[input] = e.target.checkValidity();
+        console.log('bueno:', inputs);
+
+        let arrayB=Object.values(inputs);
+        let validado = arrayB.every((v)=>v===true)
+        console.log(validado);
+
+        if (validado ===true){this.setState({valid:true})} else {this.setState({valid:false})}
     }
-        //<input type="submit" value="Enviar" pattern="[A-Za-z]{3}"/>
+        
     render(){       
-        const Listo= this.state;
+        //const {input,valid} = this.state;
         return(
-            <form className={Listo?'error':''} method="POST" onSubmit={(e)=>this._onSubmit(e)} action={this.props.web} onChange={(e)=>this._onChange(e)}>
+            <form method="POST" onSubmit={(e)=>this._onSubmit(e)} action={this.props.web} >
                 <legend>Contacto</legend>
-                <input type="text" name="name" placeholder="tu nombre"  minLength="4" required/>
-                <input type="email" name="_replyto" placeholder="tu correo" required/>
-            
-                <textarea name="message" placeholder="tu mensaje" rows="3" minLength="4" required/>
-                <input type="submit" value="Enviar" required/>
-                
+                <input type="text" name="name" placeholder="tu nombre"  minLength="4" required onChange={(e)=>this._onChange(e, "name")}/>
+                <input type="email" name="_replyto" placeholder="tu correo" required onChange={(e)=>this._onChange(e, "email")}/>
+                <textarea name="message" placeholder="tu mensaje" rows="3" minLength="4" maxLength="100" required onChange={(e)=>this._onChange(e, "message")}/>
+                {!!this.state.valid && <input type="submit" value="Enviar"/>}
             </form>
         )
     }
