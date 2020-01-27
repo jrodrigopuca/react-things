@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import './c40.css';
 
-class Contacto extends Component{
+/**
+ *  formulario de contacto
+ *  usando formspree 
+ */
+
+export class Contacto extends Component{
     state={inputs:{name:false,email:false,message:false}, 
         valid:false}
 
     _onSubmit(evt){
 
         let data = new FormData(evt.target);
-        const web=this.props.web;   
+        const web=`https://formspree.io/${this.props.web}`;   
         fetch(web,{
             method:'POST', body:data
         })
@@ -49,7 +54,9 @@ class Contacto extends Component{
     }
 }
 
-const C40 = () => <Contacto web="https://formspree.io/xlejzwly"/>;
+Contacto.defaultProps={formID:'form_ID',};
+
+const C40 = () => <Contacto formID="xlejzwly"/>;
 
 export default C40;
 
