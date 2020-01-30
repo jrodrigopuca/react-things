@@ -1,5 +1,5 @@
 import React from 'react';
-import Contacto from './C40_Contacto.jsx';
+import Contacto from './c40_Contacto.jsx';
 
 /**
  *  implementación del formulario de contacto usando formspree

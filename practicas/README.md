@@ -40,4 +40,7 @@
 - C38: Jest + react-test-renderer: Snapshot
 - C39: Enzyme
 - C40: Jest+Enzyme: Formulario de Contacto
-- C41: Redux
+- C41: Redux: Introducción (ejemplo contador)
+- C42: Redux: Separando partes de C41 y agregando  
+    - separando: Reducers, Actions, Providers, 
+    - usando: combineReducers, Provider, useSelector, useDispatch
