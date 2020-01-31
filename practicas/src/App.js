@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import C42 from './comp/c42.jsx'   ;
+import C43 from './comp/c43.jsx'   ;
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <p>
           Do something!
         </p>
-        <C42/>                                                              
+        <C43/>                                                              
       </header>
     </div>
   );
