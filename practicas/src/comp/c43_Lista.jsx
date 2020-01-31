@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Todo = ({id, text, completed, onClick})=>(
-    <li onClick={onClick}>
+    <li onClick={onClick} style={{backgroundColor: completed?'green':''}}>
         {text}
     </li>
 )
@@ -14,10 +14,10 @@ Todo.propTypes={
     onClick:PropTypes.func.isRequired
 }
 
-const TodoList = ({todosElementos})=>(
+const TodoList = ({todosElementos, evtRealizar})=>(
     <ul>
         {todosElementos.map(todo=>(
-            <Todo key={todo.id} {...todo} onClick={()=>console.log('click')} />
+            <Todo key={todo.id} {...todo} onClick={()=>evtRealizar(todo.id)} />
         ))}
     </ul>
 )

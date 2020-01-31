@@ -1,3 +1,4 @@
+import cuid from 'cuid';
 export const incrementar = (num=1) =>{
     return {type:'INCREMENTAR', payload: num}
 }
@@ -13,5 +14,12 @@ export const cambiarLog = ()=>{
 //===== Para To-Do List (Comp c43)
 export const addTodo = (text) =>({
     type: 'TODO_ADD', 
-    payload: text,
+    id: cuid(),
+    text,
+});
+
+export const realizar = (id)=>({
+    type: 'TODO_REALIZAR',
+    id
 })
+

@@ -1,12 +1,17 @@
 import TodoList from './c43_Lista.jsx';
-import {addTodo} from '../actions';
 import {connect} from 'react-redux';
+import {realizar} from '../actions';
 
 // Convertir de state a Props
 const mapStateProps = state=>({
     todosElementos:state.todos
 })
 
-const C43_Cont = connect (mapStateProps)(TodoList);
+const mapDispatchToProps = dispatch =>({
+    evtRealizar:id=>dispatch(realizar(id))
+})
 
-export default C43_Cont;
+
+const C43Cont = connect (mapStateProps, mapDispatchToProps)(TodoList);
+
+export default C43Cont;
