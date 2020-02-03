@@ -27,7 +27,6 @@ class MiniSite extends Component{
 MiniSite.propTypes={
     encabezado:PropTypes.element.isRequired,
     contenido:PropTypes.node.isRequired,
-    contenido:PropTypes.array,
 }
 
 class C15 extends Component{
