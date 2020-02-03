@@ -12,7 +12,7 @@
 - C10: Actualizar estado con propiedades. Uso del defaultProps
 - C11: Generar Lista de elementos y mostrar
 - C12: Tiempo: capturar y actualizar
-- C13: Usando JQuery y JqueryUI
+- C13: JQuery + JqueryUI: Botones personalizados
 - C14: Lista usando promesas, wrapper y UNSAFE_componentWillMount
 - C15: propTypes: opcionales/requeridos 
 - C16: propTypes: verificación de tipos
@@ -22,7 +22,7 @@
 - C20: Herencia: propiedades
 - C21: Herencia: eventos
 - C22: Higher-order: Render condicional
-- C23: Higher-order: usando store (como en Redux)
+- C23: Higher-order: usando store (simulando a Redux)
 - C24: Higher-order: compartiendo datos con store
 - C25: React Router: usando BrowserRouter
 - C26: React Router: especificando Route
@@ -41,6 +41,9 @@
 - C39: Enzyme
 - C40: Jest+Enzyme: Formulario de Contacto
 - C41: Redux: Introducción (ejemplo contador)
-- C42: Redux: Separando partes de C41 y agregando  
+- C42: Redux: Separando partes de C41 y agregando un falso Login (solo es un booleano)  
     - separando: Reducers, Actions, Providers, 
     - usando: combineReducers, Provider, useSelector, useDispatch
+- C43: Redux: Creando con ToDo List
+    - usando: conect() para pasar estados o dispatcher como props
+- C44: Redux: Async

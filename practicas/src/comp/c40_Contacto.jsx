@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './c40.css';
 
 /**
@@ -12,55 +12,80 @@ import './c40.css';
  * @todo: agregar recaptcha, para implementar agregar un id provisto por formspree
  */
 
-export default class Contacto extends Component{
-    constructor(){
+export default class Contacto extends Component {
+    constructor() {
         super();
-        this.state={inputs:{name:false,email:false,message:false}, 
-        valid:false}
+        this.state = {
+            inputs: { name: false, email: false, message: false },
+            valid: false, 
+            finished: false,
+            finihedWithError: false
+        }
     }
 
-    _onSubmit(evt){
 
-        let data = new FormData(evt.target);
-        const web=`https://formspree.io/${this.props.web}`;   
-        fetch(web,{
-            method:'POST', body:data
-        })
-        .then(function (response) {
+    _onSubmit(evt) {
+        evt.preventDefault();
+        let data = new FormData(evt.target);       
+        //console.log([...data]);
+        data=JSON.stringify(Object.fromEntries(data));
+        const web = `https://formspree.io/${this.props.formID}`;
+        
+
+        let myHeaders = new Headers({
+            'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
+            "Content-type": "application/json"
+        });
+        let options = { method: 'POST', headers: myHeaders, mode: 'cors' };
+        let nRequest = new Request(web, options);
+        let self = this;
+        fetch(nRequest, {
+            body: data,
+        }).then(function (response) {
+            //console.log('respuesta', response);
             return response.json();
         })
-        .then(function (data) {
-            console.log('success', data);
-        })
-        .catch(function (error) {
-            console.log('error', error);
-        });
+            .then(function (data) {
+                self.setState({finished:true});
+                //console.log('success', data);
+            })
+            .catch(function (error) {
+                self.setState({finishedWithErrors:true})
+                //console.log('error', error);
+            });
+        
+        evt.target.reset();
     }
 
-    _onChange(e, input){
+    _onChange(e, input) {
         let inputs = this.state.inputs;
         inputs[input] = e.target.checkValidity();
-        console.log('bueno:', inputs);
+        //console.log('entradas:', inputs);
 
-        let arrayB=Object.values(inputs);
-        let validado = arrayB.every((v)=>v===true)
-        console.log(validado);
+        let arrayB = Object.values(inputs);
+        let validado = arrayB.every((v) => v === true)
+        //console.log(validado);
 
-        if (validado ===true){this.setState({valid:true})} else {this.setState({valid:false})}
+        if (validado === true) { this.setState({ valid: true }) } else { this.setState({ valid: false }) }
     }
-        
-    render(){       
-        //const {input,valid} = this.state;
-        return(
-            <form method="POST" onSubmit={(e)=>this._onSubmit(e)} action={this.props.web} >
+
+    render() {
+        const {valid, finished, finishedWithErrors} = this.state;
+        return (
+            <form method="POST" onSubmit={(e)=>this._onSubmit(e)} action="">
                 <legend>Contacto</legend>
-                <input type="text" name="name" id="name" placeholder="tu nombre"  minLength="4" required onChange={(e)=>this._onChange(e, "name")}/>
-                <input type="email" name="_replyto" id="_replyto" placeholder="tu correo" required onChange={(e)=>this._onChange(e, "email")}/>
-                <textarea name="message" id="message" placeholder="tu mensaje" rows="3" minLength="4" maxLength="100" required onChange={(e)=>this._onChange(e, "message")}/>
-                {!!this.state.valid && <input type="submit" value="Enviar"/>}
+
+                {!!finished && <legend className="msgFinish"> Formulario enviado correctamente</legend>}
+                {!!finishedWithErrors && <legend className="msgError"> Un error ha ocurrido</legend>}
+                
+                <input type="text" name="name" id="name" placeholder="tu nombre" minLength="4" required onChange={(e) => this._onChange(e, "name")} />
+                <input type="email" name="_replyto" id="_replyto" placeholder="tu correo" required onChange={(e) => this._onChange(e, "email")} />
+                <textarea name="message" id="message" placeholder="tu mensaje" rows="3" minLength="4" maxLength="100" required onChange={(e) => this._onChange(e, "message")} />
+                {!!valid && <input type="submit" value="Enviar" />}
+                
             </form>
         )
     }
 }
 
-Contacto.defaultProps={formID:'form_ID',};
+Contacto.defaultProps = { formID: 'form_ID', };

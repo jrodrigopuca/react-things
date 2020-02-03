@@ -36,3 +36,11 @@ input:focus:invalid  ~ .cambiar{
 input:valid, textarea:valid{
     border-color:greenyellow;
 }
+
+.msgFinish{
+    background-color: #8adc73;
+}
+
+.msgError{
+    background-color: #fd5c5c;
+}
