@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
+import C01 from './src/01-count';
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -13,6 +15,7 @@ export default class App extends Component {
         <Text style={styles.welcome}>Hola React Native!</Text>
         <Text style={styles.instructions}>buen inicio</Text>
         <Text style={styles.instructions}>{instructions}</Text>
+        <C01 count={40}/>
       </View>
     );
   }
