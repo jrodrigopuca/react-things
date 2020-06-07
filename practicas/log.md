@@ -32,3 +32,5 @@
 
 ## 1/29:
 - agrego redux y su conector <code> yarn add redux react-redux </code>
+## 6/7
+- actualizar paquetes. Tuve que eliminar /node_modules y agregar todas las dependencias de nuevo usando el yarn add. Esta vez no funcionó usar el yarn upgrade.
