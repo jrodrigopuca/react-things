@@ -160,3 +160,107 @@ function App() {
   );
 }
 ```
+
+### Imagen: mostrar imagen 
+```
+import cover from './cover.jpg'
+
+function Main(props){
+  return(
+    <header>
+      <img src={cover} alt="imagen"/>
+    </header>
+  );
+}
+```
+
+### Fragment
+Sirve para poner más de dos componentes y evitar usar el elemento Div
+```
+//Renderizo un jsx
+ReactDOM.render(
+  <React.Fragment>
+    <App>
+    <OtraApp>
+  </React.Fragment>,
+  document.getElementById('root')
+);
+
+```
+
+### Conditional
+Para solamente mostrar un componente de acuerdo a una condición
+```
+function App(props){
+  return(
+    <>
+      {props.autorizado? <ComponenteSecreto/>: <ComponenteRegular/>}
+    </>
+  )
+}
+```
+
+### Desestructurando array y objetos
+Desestructurando array
+```
+const lista=["uno","dos", "tres"];
+
+const [primerElemento] = ["uno","dos", "tres"];
+console.log(primerElemento) //#=> "uno"
+
+
+const [primerElemento, segundoElemento] = ["uno","dos", "tres"];
+console.log(segundoElemento) //#=> "dos"
+
+const [,,tercerElemento] = ["uno","dos", "tres"];
+console.log(tercerElemento) //#=> "tres"
+
+```
+Desestructurando objetos
+```
+//en vez de 
+function App(props){
+  return(
+    <>
+      {props.autorizado? <ComponenteSecreto/>: <ComponenteRegular/>}
+    </>
+  )
+}
+
+//se puede desestructurar
+function App({autorizado}){
+  return(
+    <>
+      {autorizado? <ComponenteSecreto/>: <ComponenteRegular/>}
+    </>
+  )
+}
+```
+
+
+
+
+
+
+```
+import React, {useState} from "react";
+
+function Check(){
+    const [checked,setChecked] = useState(false);
+
+    return (
+        <>
+            <input 
+                type="checkbox"
+                value={checked}
+                onChange={()=>setChecked((checked)=>!checked)}
+            />
+            <p>{checked?'Con pan':'Sin pan'}</p>
+        </>
+    )
+}
+
+export default Check;
+
+
+```
