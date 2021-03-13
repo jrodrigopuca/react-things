@@ -4,6 +4,8 @@ import Emociones from './emociones';
 import Selecciones from './Selecciones';
 import Check from './check'
 import Perfil from './Perfil';
+import {Routes, Route} from 'react-router-dom';
+import { useLocation } from 'react-router';
 
 
 function Header(props){
@@ -50,7 +52,14 @@ function Footer(props){
 }
 
 
-function App() {
+function Oops(){
+  let location = useLocation();
+  return(
+    <div>Nada encontrado en {location.pathname}</div>
+  )
+}
+
+function Web() {
   return (
     <div className="App">
       <Header name="React"/>
@@ -58,6 +67,17 @@ function App() {
       <Footer year={new Date().getFullYear()}/>
     </div>
   );
+}
+
+function App(){
+  return(
+    <div>
+      <Routes>
+        <Route path="/" element={<Web/>} />
+        <Route path="*" element={<Oops />} />
+      </Routes>
+    </div>
+  )
 }
 
 export default App;
